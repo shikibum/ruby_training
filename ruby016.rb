@@ -5,7 +5,7 @@
 #   p i
 # end
 #
-# for color in ["red", "blue"] do # doは省略可能
+# for color in ["red", "blue"] do # doは[]省略可能
 #   p color
 # end
 #
@@ -15,15 +15,15 @@
 
 #each
 
-(15..20).each do |i|# doは省略可能
+(15..20).each do |i|
   p i
 end
 
-["red", "blue"].each do |color| # doは省略可能
+["red", "blue"].each do |color|
   p color
 end
 
-# {haku:200, yamato:400}.each do |name, score| # doは省略可能
+# {haku:200, yamato:400}.each do |name, score| 
 #   puts "#{name}, #{score}"
 # end
 

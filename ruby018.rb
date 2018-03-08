@@ -1,6 +1,6 @@
 # メソッドを作る
 
-def sayhi(name = "tom")  #メソッドに渡すオプションは引数と呼ぶ
+def sayhi(name = "tom")  #メソッドに渡すオプションは引数と呼ぶ、|i|とかも
   score =80
  # puts "hi! #{name}"
  return "hi! #{name}"
