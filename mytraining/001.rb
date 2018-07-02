@@ -15,3 +15,22 @@ h.values
 
 a.each {|kawauso| puts kawauso}
 h.each {|name, value| puts "#{name}\t#{value}"}
+
+
+def plus(a, b)
+  return a + b
+end
+
+plus (3, 5)
+
+def square(a)
+  a * a # a ** 2
+end
+
+def div(a, b ,c)
+  a / b / c
+end
+
+def greeting(name)
+  "Hello," + name
+end
