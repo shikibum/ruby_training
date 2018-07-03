@@ -34,3 +34,38 @@ end
 def greeting(name)
   "Hello," + name
 end
+
+class Kawauso
+  def self.species #クラスメソッド
+    "kawauso"
+  end
+
+  def say #インスタンスメソッド
+    "Pyaaaa!!"
+  end
+end
+
+haku = Kawauso.new
+haku.say
+
+class KotsumeKawauso < Kawauso
+  def say
+    "Pi!"
+  end
+
+  def initialize
+    @condition = false #インスタンス変数
+  end
+
+  def sleep
+    @condition = true
+  end
+
+  def getup
+    @condition = false
+  end
+
+  def sleep?
+    @condition
+  end
+end
