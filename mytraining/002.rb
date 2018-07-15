@@ -34,10 +34,35 @@ end
 # puts haku.say
 # puts haku.play
 
-class Cat <Mammal
+class Cat < Mammal
   include Playable
 end
 
-tama = Cat.new
+# tama = Cat.new
 
-puts tama.play
+# puts tama.play
+
+class Human < Mammal
+  def greeting(name)
+    raise StringRequiredError , "nameは文字列にする必要があります" unless name.is_a?(String)
+
+    "Hello " + name 
+  end
+
+  class StringRequiredError < StandardError
+  end
+end
+
+shikibu = Human.new
+# 例外処理
+begin 
+  # shikibu.greeting
+  puts shikibu.greeting(ARGV[0])
+# rescue Human::StringRequiredError => e
+  # p e
+  # puts "nameをいれてね"
+# rescue ArgumentError
+#   puts "引数入ってないよ"
+rescue StandardError => e # StandardErrorは省略可能
+  p e
+end

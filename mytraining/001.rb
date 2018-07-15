@@ -69,3 +69,4 @@ class KotsumeKawauso < Kawauso
     @condition
   end
 end
+
