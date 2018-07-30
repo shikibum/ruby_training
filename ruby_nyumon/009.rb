@@ -28,7 +28,7 @@
 # puts haku.name="yamato"
 
 
-# # クラスと区別するために数字の定数は全部大文字
+# # クラスと区別するために定数は全部大文字
 # class Checker
 #   TAX = 0.08
 
