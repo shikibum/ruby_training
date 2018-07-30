@@ -34,7 +34,7 @@ module ValueModule
     end
   end
 
-  module_function :minValue
+  module_function :minValue #モジュール関数
   module_function :maxValue
 end
 
