@@ -1,0 +1,12 @@
+CC = "gcc"
+
+task :default => "minutes"
+
+file "minutes" => ["minutes.o"] do
+  sh "#{CC} -o minutes minutes.o"
+end
+
+file "minutes.o" => "minutes.c" do
+  sh "#{CC} -c minutes.c"
+end
+
