@@ -44,3 +44,36 @@ b = <<~TEXT
 TEXT
 
 puts b
+
+# 真偽値
+1 && 2 && 3 #=> 3
+1 && nil && 3 #=> nil
+1 && false && 3 #=> false
+
+nil || false #=> false
+false || nil #=> nil
+nil || false || 2 || 3 #=> 2
+
+# case
+# ifを使う場合
+country = 'italy'
+if country == 'japan'
+  puts 'こんにちは'
+elsif country == 'us'
+  puts 'Hello'
+elsif country == 'italy'
+  puts 'ciao'
+else
+  '???'
+end
+# caseを使う場合
+case country
+when 'japan'
+  puts 'こんにちは'
+when 'us'
+  puts 'Hello'
+when 'italy'
+  puts 'ciao'
+else 
+  '???'
+end
