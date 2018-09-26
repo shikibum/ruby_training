@@ -65,3 +65,9 @@ m!(c)
 # b,cいずれも大文字になる
 b #=> 'HELLO'
 c #=> 'HELLO'
+
+require # 一度しか読込されない
+load './hoge.rb' # 再度読込できる、.rbは省略できない
+
+require '実行しているディレクトリがパスの起点'
+require_relative '自分のファイルが存在するディレクトリが起点'
