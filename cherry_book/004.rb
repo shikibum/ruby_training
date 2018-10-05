@@ -40,3 +40,20 @@ numbers.each do |sum_value|
 end
 sum #=>10
 # ブロック引数の名前をブロック大野にある変数の名前と一緒にするとブロック内ではブロック引数のの値が優先して参照される
+
+numbers = [1, 2, 3 ,4]
+sum = 0
+numbers.each do |n| sum += n end
+sum #=> 10
+
+numbers = [1, 2, 3, 4]
+sum = 0
+number.each { |n| sum += n }
+sum #=> 10
+
+numbers = [1, 2, 3, 4]
+sum = 0
+numbers.each { |n|
+  sum += n 
+}
+sum #=> 10
