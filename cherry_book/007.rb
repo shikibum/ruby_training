@@ -40,7 +40,31 @@ end
 greeting('田中さん') #=> "田中さん、こんにちは！"
 greeting('田中さん', 'スズキさん') #=> "田中さんとスズキさん、こんにちは！"
 
-
 a = [1, 2, 3]
 [-1, 0, *a, 4, 5] #=> [-1, 0, 1, 2, 3, 4, 5]
 [-1, 0] + a + [4, 5] #=> [-1, 0, 1, 2, 3, 4, 5]
+
+[1, 2, 3] == [1, 2, 3] #=> true
+[1, 2, 3] == [1, 2] #=> false
+[1, 2, 3] == [1, 2, 4] #=> false
+
+['apple', 'melon', 'orange'] #=> ["apple", "melon", "orange"]
+%w!apple melon orange! #=> ["apple", "melon", "orange"]
+%w(apple melon orange) #=> ["apple", "melon", "orange"]
+%w(
+  apple
+  melon
+  orange
+) #=> ["apple", "melon", "orange"]
+
+%w(big\ apple small\ melon orange) #=> ["big apple", "small melon", "orange"]
+prefix = 'This is'
+%W(#{prefix}\ an\ apple small\nmelon orange)
+#=> ["This is an apple", "small\nmelon", "orange"]
+
+'Ruby'.chars #=> ["R", "u", "b", "y"]
+'Ruby,Java,Perl,PHP'.split(',') #=> ["Ruby", "Java", "Perl", "PHP"]
+
+a = Array.new(5) #=> [nil, nil, nil, nil, nil]
+a = Array.new(5,0) #=> [0, 0, 0, 0, 0]
+a = Array.new(10) { |n| n % 3 + 1} #=> [1, 2, 3, 1, 2, 3, 1, 2, 3, 1]
