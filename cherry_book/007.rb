@@ -68,3 +68,18 @@ prefix = 'This is'
 a = Array.new(5) #=> [nil, nil, nil, nil, nil]
 a = Array.new(5,0) #=> [0, 0, 0, 0, 0]
 a = Array.new(10) { |n| n % 3 + 1} #=> [1, 2, 3, 1, 2, 3, 1, 2, 3, 1]
+
+
+a = Array.new(5, 'default') #=> ["default", "default", "default", "default", "default"]
+str = a[0] #=> "default"
+str.upcase! #=> "DEFAULT" 破壊的変更
+a #=> ["DEFAULT", "DEFAULT", "DEFAULT", "DEFAULT", "DEFAULT"]
+
+a = Array.new(5) { 'default' } #=> ["default", "default", "default", "default", "default"]
+str = a[0] #=> "default"
+str.upcase!
+a #=> ["DEFAULT", "default", "default", "default", "default"]
+
+
+
+
