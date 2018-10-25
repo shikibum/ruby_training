@@ -84,7 +84,8 @@ a.delete 100 do
   'NG'
 end
 #=> "NG"
-a.delete 100 { 'NG' }
+
+#a.delete 100 { 'NG' }
 #=> SyntaxError ((irb):105: syntax error, unexpected '{', expecting end-of-inpu
 a.delete (100) { 'NG' }
 #=> "NG"
