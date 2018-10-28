@@ -47,3 +47,35 @@ until a.size <= 3
   a.delete_at(-1)
 end
 a #=>=> [10, 20, 30]
+
+numbers = [1, 2, 3, 4]
+sum = 0
+for n in numbers
+  sum += n 
+end #=> 10
+
+sum = 0
+for n in numbers do sum += n end
+sum #=> 10
+
+numbers = [1, 2, 3, 4]
+sum = 0
+numbers.each do |n|
+  sum += n
+end
+sum #=> 10
+
+numbers = [1, 2, 3, 4]
+sum = 0
+numbers.each do |n|
+  sum_value = n.even? ? n * 10 : n
+  sum += sum_value
+end
+n #=> NameError (undefined local variable or method `n' for main:Object)
+sum_value #=> NameError (undefined local variable or method `sum_value' for main:Object)
+
+sum = 0
+for n in numbers
+  sum_value = n.even? ? n * 10 : n
+  sum += sum_value
+end
