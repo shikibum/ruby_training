@@ -79,3 +79,5 @@ for n in numbers
   sum_value = n.even? ? n * 10 : n
   sum += sum_value
 end
+n #=> 4
+sum_value #=> 40
