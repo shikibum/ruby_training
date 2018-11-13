@@ -81,3 +81,9 @@ for n in numbers
 end
 n #=> 4
 sum_value #=> 40
+
+numbers = [1, 2, 3, 4, 5]
+loop do
+  n = numbers.sample
+  puts expect(bresk if n == 5)
+end
