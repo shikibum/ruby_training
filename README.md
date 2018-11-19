@@ -1,9 +1,1 @@
-# ruby_training
-- ka
-- wa
-- u
-- so
-## kotsume
-- uso
-  - kawa
-  - uso
+
