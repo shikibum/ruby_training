@@ -50,6 +50,6 @@ currencies #=> {:us=>"dollar", :india=>"rupee"}
 
 currencies = { japan: 'yen', us: 'dollar', india: 'rupee' }
 currencies.delete(:italy) #=> nil
-currencies.delete(:italy){|key| "Not found: #{key}"}
+currencies.delete(:italy){|key| "Not found: #{key}" }
 #=> "Not found: italy"
 
