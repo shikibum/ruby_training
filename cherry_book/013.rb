@@ -58,9 +58,36 @@ a.upcase!
 a #=> "HELLO"
 b #=> "hello"
 
+:apple
+:apple
+:ruby_is_fun
+:okay?
+:welcome!
+:_secret
+:$dollar
+:@at_mark
 
+:'122345'
+:'ruby is fun'
+:'()'
 
+name = 'Alice'
+:"#{name.upcase}" #=> :ALICE
 
+hash = { 'abc': 123 } #=> {:abc=>123}
 
+%s!ruby is fun! #=> :"ruby is fun"
+%s(ruby is fun) #=> :"ruby is fun"
 
+%i(apple orange melon) #=> [:apple, :orange, :melon]
+
+name = 'Alice'
+%i(hello\ngood-bye #{name.upcase}) #=> [:"hello\\ngood-bye", :"\#{name.upcase}"]
+%I(hello\ngood-bye #{name.upcase}) #%I(hello\ngood-bye #{name.upcase})
+
+string = 'apple'
+symbol = :apple
+
+string.to_sym #=> :apple
+symbol.to_s #=> "apple"
 
